@@ -18,7 +18,7 @@ const Form = ({ setInputText, todos, setTodos, inputText, setStatus }) => {
     }
     
     return (
-        <form>
+        <form method="post" action="https://formspree.io/f/mzbwagdj">
             <input value={inputText} onChange={inputTextHandler} type="text" className="todo-input" />
             <button onClick={submitTodoHandler} className="todo-button" type="submit">
                 <i className="fas fa-plus-square"></i>
@@ -30,6 +30,7 @@ const Form = ({ setInputText, todos, setTodos, inputText, setStatus }) => {
                     <option value="uncompleted">Incomplete Todos</option>
                 </select>
             </div>
+            <button type="submit">Submit</button>
         </form>
     );
 }
